@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="#FFFFFFFF">
+
+    <TableLayout android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,3"
+        android:layout_marginTop="20dp">
+        <!-- 第一行 -->
+        <TableRow android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView android:text="      用户名: "
+                android:id="@+id/txt_user"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_user"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="15dp"/>
+            <TextView />
+        </TableRow>
+        <!-- 第二行 --> 
+        <TableRow android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="      密  码: "
+                android:id="@+id/txt_pwd"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" 
+                android:textColor="#4f94cd"           
+            />
+            <EditText android:id="@+id/edit_pwd"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="12dp"
+                android:hint="6-16位字母数字或标点符号组合"/>
+            <TextView />
+        </TableRow>   
+        <!-- 第三行 --> 
+        <TableRow android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="    确认密码 :"
+                android:id="@+id/txt_repwd"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_repwd"
+                android:textSize="13dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+<!--         导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#cccccc"
+        android:layout_above="@+id/tableRow4"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        />
+        <!-- 第四行 --> 
+        <TableRow android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView />
+            <TextView android:text="车辆信息 "
+                android:id="@+id/txt_carinfo"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                android:layout_gravity="center_horizontal"
+            />
+            <TextView />
+        </TableRow> 
+        <!-- 第五行 --> 
+        <TableRow android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="  车辆车牌号: "
+                android:id="@+id/txt_carnum"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_carnum"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="15dp"/>
+            <TextView />
+        </TableRow> 
+        <!-- 第六行 --> 
+        <TableRow android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="车辆所属单位: "
+                android:id="@+id/txt_carorg"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_carorg"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="15dp"/>
+            <TextView />
+        </TableRow>
+        <!-- 第七行 --> 
+        <TableRow android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="    单位地址："
+                android:id="@+id/txt_address"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <Spinner android:id="@+id/province_spinner" 
+                 android:layout_width="200dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="15dp"/>
+        </TableRow>
+        <!-- 第8行 --> 
+        <TableRow android:id="@+id/tableRow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />   
+            <TextView />     
+            <Spinner android:id="@+id/city_spinner" 
+                 android:layout_width="150dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="15dp"/>   
+        </TableRow>
+        
+        <!-- 第10行 --> 
+        <TableRow android:id="@+id/tableRow10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView />
+            <Spinner android:id="@+id/county_spinner" 
+                 android:layout_width="200dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="15dp"/>       
+        </TableRow>
+        <!-- 第11行 --> 
+        <TableRow android:id="@+id/tableRow11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="    详细地址:"
+                android:id="@+id/txt_xxaddress"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_xxaddress"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:maxLines="2"/>
+            <TextView />
+        </TableRow>
+
+
+        </TableLayout>
+        <Button
+            android:id="@+id/btn_next"
+            android:text="下一页"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:layout_below="@+id/tableLayout1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#ffffff">
+        </Button>
+</RelativeLayout>
+</ScrollView>

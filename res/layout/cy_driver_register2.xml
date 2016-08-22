@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="#FFFFFFFF">
+
+    <TableLayout android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFFFF"
+        android:stretchColumns="0,3"
+        android:layout_below="@+id/txt_hcsj"
+        android:layout_marginTop="30dip">
+        <!-- 第一行 -->
+        <TableRow android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView android:text="载重量(吨):"
+                android:id="@+id/txt_carweight"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_carweight"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第2行 -->
+        <TableRow android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="装载体积(m³): "
+                android:id="@+id/txt_zztj"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_zztj"
+                android:textSize="15dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+               android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第3行 --> 
+       <TableRow android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="车辆类型: "
+                android:id="@+id/txt_cllx"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <Spinner android:id="@+id/spin_cllx"
+                android:textSize="15dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/ctype"/>
+        </TableRow>
+        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#cccccc"
+        android:layout_above="@+id/tableRow4"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        />
+        <!-- 第4行 --> 
+        <TableRow android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView />
+            <TextView android:text="驾驶员信息 "
+                android:id="@+id/txt_jsyxx"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                android:layout_gravity="center_horizontal"
+            />
+            <TextView />
+        </TableRow>    
+        <!-- 第5行 --> 
+        <TableRow android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="驾驶员姓名:"
+                android:id="@+id/txt_jsyxm"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_jsyxm"
+                android:textSize="15dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+
+        <!-- 第6行 --> 
+        <TableRow android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="驾驶员手机号:"
+                android:id="@+id/txt_jsynum"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_jsytel"
+                android:textSize="15dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第7行 --> 
+        <TableRow android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="驾驶员身份证:"
+                android:id="@+id/txt_jsysfz"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_jsyid"
+                android:textSize="15dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第8行 --> 
+        <TableRow android:id="@+id/tableRow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="银行卡号:"
+                android:id="@+id/txt_yhkh"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_yhkh"
+                android:textSize="15dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第9行 --> 
+        <TableRow android:id="@+id/tableRow9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="银行单位:"
+                android:id="@+id/txt_yhkh2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_yhorg"
+                android:textSize="15dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>        
+        </TableLayout>
+        <Button
+            android:id="@+id/btn_ylzcxx"
+            android:text="预览信息"
+            android:textColor="#ffffff"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayout1"
+            android:layout_marginTop="40dip"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttonshape">
+        </Button>  
+</RelativeLayout>
+</ScrollView>

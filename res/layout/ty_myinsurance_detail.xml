@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:background="#FFFFFFFF">
+     <View 
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="#CCCCCC"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"/>  
+    <View 
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="#CCCCCC"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"/> 
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"/>
+
+
+    <TableLayout android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:stretchColumns="0,3"
+        android:layout_marginTop="10dip">  
+        <!-- 第一行 -->
+        <TableRow android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView1"
+                android:text="发布编号:"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_fbnum"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow2"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第3行 -->
+        <TableRow android:id="@+id/tableRow2"            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView3"
+                android:text="保单号:"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_insurnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+
+        </TableRow>
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow3"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第3行 -->
+        <TableRow android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView5"
+                android:text="保险人名称:"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_insure_name"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow6"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第4行 -->
+        <TableRow android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView 
+                android:id="@+id/z"
+                android:text="被保险人名称:"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_insured_name"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow4"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第5行 -->
+        <TableRow android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView7"
+                android:text="被保险人电话:"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_insured_tel"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow5"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第6行 -->
+        <TableRow android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView9"
+                android:text="被保险人地址:"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_insured_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow7"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第7行 -->
+        <TableRow android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView13"
+                android:text="货物名称:"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_goods_name"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow9"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第9行 -->
+        <TableRow android:id="@+id/tableRow9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView android:text="货物重量:"
+                android:id="@+id/textView17"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_goods_weight"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow11"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第11行 -->
+        <TableRow android:id="@+id/tableRow11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView android:text="起运地:"
+                android:id="@+id/textView21"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_goods_loadaddr"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow12"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第12行 -->
+        <TableRow android:id="@+id/tableRow12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView android:text="到达地:"
+                android:id="@+id/textView23"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_goods_destination"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow> 
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow13"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第13行 -->
+        <TableRow android:id="@+id/tableRow13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView android:text="货物价值:"
+                android:id="@+id/textView25"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_insuremoney"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow15"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+        <!-- 第14行 -->
+        <TableRow android:id="@+id/tableRow15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView android:text="保险费:"
+                android:id="@+id/textView27"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_premium"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="按约定"
+            />
+            <TextView />
+        </TableRow>  
+      <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow16"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+      <!-- 第16行 -->
+        <TableRow android:id="@+id/tableRow16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip">
+            <TextView />
+            <TextView android:text="发货时间:"
+                android:id="@+id/textView28"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_delivertime"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>       
+        </TableLayout>
+    <Button android:id="@+id/btn_pay"
+        android:text="余额支付"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tableLayout1"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/buttonshape"
+        android:textColor="#ffffff"/>
+
+    <Button android:id="@+id/btn_preview22"
+        android:text="保单预览"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_pay"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonshape"
+        android:textColor="#ffffff"/>
+</RelativeLayout>
+</ScrollView>

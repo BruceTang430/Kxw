@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:background="@drawable/v">  
+
+     <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/txt_title"
+        android:layout_centerHorizontal="true">
+        <ImageView android:layout_width="100dp"
+         android:layout_height="100dp"
+         android:scaleType="fitXY"
+         android:background="@drawable/car2"
+         android:layout_marginTop="30dp"
+         android:layout_marginBottom="30dp"
+         android:layout_gravity="center_horizontal"
+         />        
+        <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >          
+        <TextView android:text="用户名:"
+            android:id="@+id/textView2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" 
+            android:textColor="#ffffff" />
+        <EditText android:id="@+id/editText1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="15dp"/>
+        </LinearLayout> 
+        <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp" 
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp">             
+        <TextView android:text="密    码: "
+            android:id="@+id/textView3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            />
+        <EditText android:id="@+id/editText2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="15dp"
+            />
+        </LinearLayout> 
+        
+        <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+            <CheckBox android:id="@+id/remember"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="记住密码" 
+                android:textSize="17dp"
+                android:textColor="#ffffff"/>
+           <Button android:text="找回密码"
+            android:id="@+id/btn_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            android:layout_marginLeft="80dip"
+            android:background="#00000000"/>
+        </LinearLayout>
+        <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp">"
+        
+        <Button android:id="@+id/btn_login"
+            android:text="登  陆"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"            
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"/>
+        <Button android:id="@+id/btn_register"
+            android:text="注  册"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"
+            android:layout_marginTop="25dip"/>
+        </LinearLayout>
+        
+        
+   
+        
+   </LinearLayout> 
+   
+</RelativeLayout>

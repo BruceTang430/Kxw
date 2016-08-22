@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:background="#FFFFFFFF">
+    <TableLayout android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+        <!-- 第一行 -->
+        <TableRow android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView android:text="   发货人:"
+                android:id="@+id/txt_fhr"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_fhr"
+                android:textSize="15dp"
+                android:layout_width="180dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第二行 --> 
+        <TableRow android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="发货人电话:"
+                android:id="@+id/txt_fhrnum"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_fhrnum"
+                android:textSize="15dp"
+                android:layout_width="180dip"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+  
+        <!-- 第三行 --> 
+        <TableRow android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="   发货地:"
+                android:id="@+id/txt_fhaddress"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"/>
+                <Spinner android:id="@+id/province_spinner" 
+                 android:layout_width="180dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="15dp">
+             </Spinner> 
+            
+        </TableRow>
+        <!-- 第四行 --> 
+        <TableRow android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView />  
+            <Spinner android:id="@+id/city_spinner" 
+                 android:layout_width="180dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="15dp">
+             </Spinner> 
+             
+        </TableRow> 
+        <!-- 第五行 --> 
+        <TableRow android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView />
+            <Spinner android:id="@+id/county_spinner" 
+                 android:layout_width="180dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="15dp">
+             </Spinner>  
+             
+        </TableRow>
+             
+        <!-- 第7行 --> 
+        <TableRow android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="  详细地址:"
+                android:id="@+id/txt_xxaddress"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_xxaddress"
+                android:textSize="15dp"
+                android:layout_width="180dip"
+                android:layout_height="wrap_content"
+                android:maxLines="2"/>
+            <TextView />
+        </TableRow> 
+ 
+        <!-- 第9行 --> 
+        <TableRow android:id="@+id/tableRow9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="   到达地:"
+                android:id="@+id/txt_ddaddress"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <Spinner android:id="@+id/province_spinner2" 
+                 android:layout_width="180dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="15dp">
+             </Spinner> 
+        </TableRow>
+        <!-- 第10行 --> 
+        <TableRow android:id="@+id/tableRow410"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView />
+            <TextView />
+            <Spinner android:id="@+id/city_spinner2" 
+                 android:layout_width="180dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="15dp"/>  
+             
+        </TableRow> 
+        <!-- 第11行 --> 
+        <TableRow android:id="@+id/tableRow11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView />
+            <TextView />  
+            <Spinner android:id="@+id/county_spinner2" 
+                 android:layout_width="180dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="15dp"/>
+        </TableRow>
+              
+        <!-- 第13行 --> 
+        <TableRow android:id="@+id/tableRow13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="  详细地址:"
+                android:id="@+id/txt_xxaddress2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_xxaddress2"
+                android:textSize="15dp"
+                android:layout_width="180dip"
+                android:layout_height="wrap_content"
+                android:maxLines="2"/>
+            <TextView />
+        </TableRow>        
+        </TableLayout>
+        <Button
+            android:id="@+id/btn_next"
+            android:text="下一页"
+            android:textColor="#ffffff"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tableLayout1"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/buttonshape">
+        </Button>
+</RelativeLayout>
+</ScrollView>

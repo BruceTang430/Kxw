@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="ctype">
+        <item>平板半挂</item>
+        <item>平板高栏</item>
+        <item>全箱式</item>
+        <item>半箱式</item>
+    </string-array>        
+</resources>

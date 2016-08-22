@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:id="@+id/relativelayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFFFFFFF" >
+    <TableLayout android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:stretchColumns="0,3"
+        android:layout_marginTop="25dip" >
+       
+        <!-- 第一行 -->
+        <TableRow android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView1"
+                android:text="出发地:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_load_address"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+                        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow19"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+                <!-- 第一行 -->
+        <TableRow android:id="@+id/tableRow19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView10"
+                android:text="到达地:"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_destination_address"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+                <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow6"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+        <!-- 第2行 -->
+        <TableRow android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView2"
+                android:text="车辆类型:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_car_type"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+                        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow3"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+        <!-- 第3行 -->
+        <TableRow android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView3"
+                android:text="长度(米):"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_car_length"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+                        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow4"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+        <!-- 第4行 -->
+        <TableRow android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView4"
+                android:text="数量(辆):"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_car_number"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+                        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow5"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+        <!-- 第5行 -->
+        <TableRow android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView5"
+                android:text="承运重量(吨):"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_car_weight"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow6"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+        <!-- 第6行 -->
+        <TableRow android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView6"
+                android:text="承运体积(m³):"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_car_vol"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+                        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow7"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+        <!-- 第7行 -->
+        <TableRow android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView7"
+                android:text="发车时间:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_go_time"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow8"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+        <!-- 第8行 -->
+        <TableRow android:id="@+id/tableRow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView8"
+                android:text="联系电话:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_tel"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+            />
+            <TextView />
+        </TableRow>
+                        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow9"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+        <!-- 第9行 -->
+        <TableRow android:id="@+id/tableRow9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView9"
+                android:text="发布时间:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_time"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+                        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow99"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+        <!-- 第9行 -->
+        <TableRow android:id="@+id/tableRow99"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView99"
+                android:text="备注:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_remark"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_below="@+id/tableRow99"
+        android:layout_marginTop="5dp"/>
+    </TableLayout>
+
+
+</RelativeLayout>

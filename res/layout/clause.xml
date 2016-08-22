@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <ScrollView
+        android:id="@+id/scrollView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"    
+    android:background="#FFFFFFFF"
+
+>
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+            <TextView 
+                android:id="@+id/txt_user"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:text="《投保协议》\n\n一、除外责任\n\n
+       由于下列原因造成保险货物的损失，保险人不负赔偿责任：\n\n
+       1 战争或军事行动 ;\n\n        2 核事件或核爆炸 ;\n\n        3 保险货物本身的缺陷、自然损耗，以及货物包装不善 ;\n\n
+       4 被保险人的故意行为或过失 ;\n\n        5 全程是公路货物运输的，盗窃和整件提货不着的损失 ;\n\n
+       6 其他不属于保险责任范围内的损失。\n\n二、保险条件\n\n      1.不保标的：\n\n
+        1.1 武器弹药、现金、支票、票据、 单证、有价证券、信用证、护照；\n\n         1.2 艺术品、金银、珠宝、钻石、玉器、文物、古玩等贵重物品 ;\n\n
+        1.3 鱼粉 、菜籽饼、地瓜干等易自燃易腐易蛀易变质货物 ;\n\n         1.4 爆竹、烟花等易燃易爆品及危险品 ;\n\n         1.5 在中国大陆境内无法修复的精密仪器 ;\n\n
+        1.6 军用品 ;\n\n
+        1.7 水泥、食糖  ;\n\n         1.8 动植物 ;\n\n         1.9 散装货物 ;\n\n         1.10 二手货物、旧设备只能买基本险 ;\n\n
+        1.11 蔬菜、水果、冷藏、大理石\n\n      2 保险条件：\n\n        2.1 国内货运（水路、陆路）按《国内水路、陆路货物运输保险条款》承保综合险 ;\n\n
+     3 保险价值：按起运地货物的发票价或买卖合同价确定。\n\n      4 免赔额：\n\n
+        4.1 普通货物免赔：每次事故绝对免赔额为人民币1500元或损失金额的10%，两者以高者为准；火灾及运输工具倾覆造成的损失，每次事故绝对免赔为RMB6000.00元或损失金额的20%，以高者为准；具体免赔以保单为准。\n\n
+        4.2 易碎品货物石材、瓷器、灯具、洁具、玻璃免赔：每次事故绝对免赔额为RMB10000.00或损失金额的20%，以高者为准 ;\n\n         4.3 红木家具每次事故绝对赔额为RMB20000.00或损失金额的20%，两者以高者为准 ;\n\n
+        4.4 成品车剔除擦刮锈损责任险。\n\n三、运输条件\n\n      1 货物包装：纸箱、木箱、胶袋、铁桶、帆布、塑料袋（货物的保险黄必须符合长途运输的有关规定和标准） ;\n\n      2 运输工具：汽车 ;\n\n
+     3 运输路线：全国各大中城市间的，但西藏及港澳台地区除外 ;\n\n      4 运输限额： 每一车次运输限额为人民币200万，如超过该限额，乙方应提前1个工作日向甲方提出书面申请，甲方根据具体情况决定是否承保，并书面确认后方可 承保。否则保险人不负赔偿责任。\n\n
+     5 特别约定：\n\n        5.1 公路运输时建议使用全封闭式卡车，在条件不允许的情况下，需使用防水布密封覆盖保险标的物以作保护，否则，甲方不负赔偿责任 ;\n\n
+       5.2 承运工具在运输保险标的时必须符合国家及交通运输部门关于安全运输的有关规定，否则，甲方不负赔偿责任 ;\n\n        5.3 裸装货物剔除锈损刮擦责任 ;\n\n四、附则\n\n      1 保证条款\n\n
+        1.1 如发生保险责任范围内的损失，被保险人应在保险条款规定的时间内尽早通知甲方，并同时力争避免和减少损失的扩大 ;\n\n
+        1.2 如损失涉及第三方责任方，被保险人应配合甲方向第三责任方追偿，如被保险人擅自放弃此项权益，甲方有权拒绝承担赔偿责任 ;\n\n      2 司法管辖权：本协议受中华人民共和国司法管辖（港澳台除外）"
+            />       
+    </ScrollView>
+         <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/scrollView1">
+     <RadioButton android:id="@+id/radbtn_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我已阅读并同意《投保协议》"             
+                android:checked="false"
+                android:layout_centerHorizontal="true"
+                />
+     <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/radbtn_agree">"
+     <Button
+            android:id="@+id/btn_back"
+            android:text="返回"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ffffff"/>
+     <Button
+            android:id="@+id/btn_next"
+            android:text="下一步"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="15dp"/>
+     </LinearLayout>
+     </LinearLayout>"
+</RelativeLayout>
+    </ScrollView>

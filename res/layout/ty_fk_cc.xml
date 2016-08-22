@@ -1,0 +1,57 @@
+<RelativeLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFFFF">
+    <TableLayout android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFFFF"
+        android:stretchColumns="0,3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+        <!-- 第一行 -->
+        <TableRow android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dip">
+            <TextView />
+            <TextView android:text="保险金额折合车次"
+                android:id="@+id/txt_kxw"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView android:id="@+id/txt_zhcc"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"/>
+            <TextView />
+        </TableRow>
+        <!-- 第二行 --> 
+        <TableRow android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dip">
+            <TextView />
+            <TextView android:text="  剩余可用车次"
+                android:id="@+id/txt_yhk"
+                android:textSize="15dp"
+                android:textColor="#4f94cd"
+                android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/txt_kycc"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"/>
+            <TextView />
+        </TableRow>   
+        </TableLayout>
+        <Button
+            android:id="@+id/btn_pay"
+            android:text="确认付款"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tableLayout1"
+            android:layout_marginTop="50dp">
+        </Button>
+</RelativeLayout>

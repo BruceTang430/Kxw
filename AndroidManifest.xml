@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kxw"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+<!--     百度地图权限 -->
+<uses-permission android:name="android.permission.GET.ACCOUNTS" />
+
+<!-- 往sdcard中创建与删除文件权限 -->	
+ <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    
+    <!-- 个推SDK权限配置开始 -->
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.GET_TASKS" />
+<!-- ibeancon 需要蓝牙权限 -->
+<uses-permission android:name="android.permission.BLUETOOTH"/>  
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+<!-- 支持个推3.0 电子围栏功能 -->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<!-- 浮动通知权限 -->
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+<!-- 自定义权限 -->  
+<uses-permission android:name="getui.permission.GetuiService.com.kxw" /><!--替换为第三方应用的包名-->
+<permission
+    android:name="getui.permission.GetuiService.com.kxw"
+    android:protectionLevel="normal" >
+</permission><!--替换为第三方应用的包名-->
+<!-- 个推SDK权限配置结束 -->
+
+
+    <application
+        android:name=".Kxw_Application" 
+        android:allowBackup="true"
+        android:icon="@drawable/car2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+       <meta-data  
+            android:name="com.baidu.lbsapi.API_KEY"  
+            android:value="s1j5G50nUWvWL2wNVL8yrRkf0OYekjhx" />
+        
+ <!--个推SDK配置开始-->
+    <!-- 配置的第三方参数属性 -->
+    <meta-data
+        android:name="PUSH_APPID"
+        android:value="oZTocDSIVU9uEKhcE8jJu5" /><!--替换为第三方应用的APPID-->
+    <meta-data
+        android:name="PUSH_APPKEY"
+        android:value="mqemM8L0Ev6XV3de6Hian" /><!--替换为第三方应用的APPKEY-->
+    <meta-data
+        android:name="PUSH_APPSECRET"
+        android:value="k2YrVJV1lr54GqleG5DbW7" /><!--替换为第三方应用的APPSECRET-->
+    <meta-data
+            android:name="PUSH_GROUPID"
+            android:value="" />
+    <!-- 配置第三方Receiver -->
+        <receiver
+            android:name="com.kxw.PushDemoReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.oZTocDSIVU9uEKhcE8jJu5" />
+            </intent-filter>
+        </receiver>
+    <!-- 配置SDK核心服务 -->
+    <service
+        android:name="com.igexin.sdk.PushService"
+        android:exported="true"
+        android:label="NotificationCenter"
+        android:process=":pushservice" />
+    <service
+        android:name="com.igexin.sdk.PushServiceUser"
+        android:exported="true"
+        android:label="NotificationCenterUser" />
+    <receiver android:name="com.igexin.sdk.PushReceiver" >
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+            <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            <action android:name="android.intent.action.USER_PRESENT" />
+            <action android:name="com.igexin.sdk.action.refreshls" />
+            <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+            <action android:name="android.intent.action.MEDIA_MOUNTED" />
+            <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+            <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+        </intent-filter>
+    </receiver>
+     
+    <receiver
+        android:name="com.igexin.sdk.PushManagerReceiver"
+        android:exported="false" >
+        <intent-filter>
+            <action android:name="com.igexin.sdk.action.pushmanager" />
+        </intent-filter>
+    </receiver>
+    <activity
+        android:name="com.igexin.sdk.PushActivity"
+        android:excludeFromRecents="true"
+        android:exported="false"
+        android:process=":pushservice"
+        android:taskAffinity="com.igexin.sdk.PushActivityTask"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity
+        android:name="com.igexin.sdk.GActivity"
+        android:excludeFromRecents="true"
+        android:exported="true"
+        android:process=":pushservice"
+        android:taskAffinity="com.igexin.sdk.PushActivityTask"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+ 
+    <service
+        android:name="com.igexin.download.DownloadService"
+        android:process=":pushservice" />
+ 
+    <receiver android:name="com.igexin.download.DownloadReceiver" >
+        <intent-filter>
+            <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+        </intent-filter>
+    </receiver>
+ 
+    <provider
+        android:name="com.igexin.download.DownloadProvider"
+        android:exported="true"
+        android:authorities="downloads.com.kxw"
+        android:process=":pushservice" /><!--替换为第三方应用的包名-->
+ 
+    <activity   
+        android:name="com.igexin.getuiext.activity.GetuiExtActivity"   
+        android:configChanges="orientation|keyboard|keyboardHidden"  
+        android:excludeFromRecents="true"  
+        android:exported="false"  
+        android:process=":pushservice"   
+        android:taskAffinity="android.task.myServicetask"   
+        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+     
+    <receiver
+        android:name="com.igexin.getuiext.service.PayloadReceiver"
+        android:exported="false" >
+        <intent-filter>
+            <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+            <action android:name="com.igexin.sdk.action.oZTocDSIVU9uEKhcE8jJu5" /><!--替换为第三方应用的APPID-->
+        </intent-filter>
+    </receiver>
+    <service
+        android:name="com.igexin.getuiext.service.GetuiExtService"
+        android:process=":pushservice" />
+ 
+<!-- 个推SDK配置结束 -->
+
+        
+        
+        <activity
+            android:name=".First_Activity"
+            android:label="控险网" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ActivityCollector"
+            android:label="退出">           
+        </activity>
+        <activity
+            android:name=".Ty_infoManagement"
+            android:label="信息管理">           
+        </activity>
+        
+        <activity
+            android:name=".Third_main"
+            android:label="用户登录">           
+        </activity>
+        <activity
+            android:name=".Third_login"
+            android:label="用户登录"
+            android:parentActivityName=".First_Activity">           
+        </activity>
+        <activity
+            android:name=".Third_register2"
+            android:label="注册新用户"
+            android:parentActivityName=".Third_login">          
+        </activity>
+        <activity
+            android:name=".Third_choose"
+            android:label="我要保险"
+            android:parentActivityName=".Third_main">          
+        </activity>
+        <activity
+            android:name=".Third_insure_ty3"
+            android:label="我要保险"
+            android:parentActivityName=".Third_main">          
+        </activity>
+        <activity
+            android:name=".Third_clause"
+            android:label="投保协议"
+            android:parentActivityName=".Third_main">          
+        </activity>        
+        <activity
+            android:name=".Third_insure_cy_cash3"
+            android:label="我要保险"
+            android:parentActivityName=".Third_main">          
+        </activity>        
+        <activity
+            android:name=".Third_insure_type"
+            android:label="我要保险"
+            android:parentActivityName=".Third_main">          
+        </activity>  
+        <activity
+            android:name=".Third_insure_cy_type"
+            android:label="我要保险"
+            android:parentActivityName=".Third_main">          
+        </activity> 
+        <activity
+            android:name=".Third_insure_cy_time22"
+            android:label="我要保险"
+            android:parentActivityName=".Third_main">          
+        </activity> 
+                <activity
+            android:name=".Third_insure_cy_time11"
+            android:label="我要保险"
+            android:parentActivityName=".Third_main">          
+        </activity> 
+                <activity
+            android:name=".Third_insure_cy_time33"
+            android:label="我要保险"
+            android:parentActivityName=".Third_main">          
+        </activity>  
+        <activity
+            android:name=".Third_insure_cy_time44"
+            android:label="我要保险"
+            android:parentActivityName=".Third_main">          
+        </activity>    
+        <activity
+            android:name=".Third_insure_cy_time555"
+            android:label="我要保险"
+            android:parentActivityName=".Third_main">          
+        </activity> 
+                                   
+        <activity
+            android:name=".Third_pay_online"
+            android:label="付款"
+            android:parentActivityName=".Third_main">          
+        </activity>
+        <activity
+            android:name=".Third_myInsurance"
+            android:label="我的保单"
+            android:parentActivityName=".Third_main">          
+        </activity>
+        <activity
+            android:name=".Third_myInsurance_detail"
+            android:label="我的保单"
+            android:parentActivityName=".Third_main">          
+        </activity>
+        <activity
+            android:name=".Third_myInsurance_preview"
+            android:label="我的保单"
+            android:parentActivityName=".Third_main">          
+        </activity>
+        <activity
+            android:name=".Third_set"
+            android:label="设置"
+            android:parentActivityName=".Third_main">          
+        </activity>
+        <activity
+            android:name=".Third_set_myInfo"
+            android:label="设置"
+            android:parentActivityName=".Third_set">          
+        </activity>  
+        <activity
+            android:name=".Third_identify"
+            android:label="实名认证"
+            android:parentActivityName=".Third_set">          
+        </activity>    
+        <activity
+            android:name=".Third_freight"
+            android:label="货运保险"
+            android:parentActivityName=".Third_main">          
+        </activity>      
+        <activity
+            android:name=".Third_myInsurance_type"
+            android:label="我的保单"
+            android:parentActivityName=".Third_main">          
+        </activity>  
+        <activity
+            android:name=".Third_myInsurance_freight"
+            android:label="我的保单"
+            android:parentActivityName=".Third_main">          
+        </activity>         
+        <activity
+            android:name=".Third_myInsurance_freight_detail"
+            android:label="我的保单"
+            android:parentActivityName=".Third_myInsurance_freight">          
+        </activity>  
+        <activity
+            android:name=".Third_admin_notice"
+            android:label="控险网公告"
+            android:parentActivityName=".First_Activity">          
+        </activity>
+        
+        
+        <activity
+            android:name=".Ty_admin_notice"
+            android:label="控险网公告"
+            android:parentActivityName=".First_Activity">          
+        </activity>
+        <activity
+            android:name=".Ty_insure_clause"
+            android:label="投保协议"
+            android:parentActivityName=".Ty_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Ty_loginActivity"
+            android:label="用户登录"
+            android:parentActivityName=".First_Activity">           
+        </activity>
+        <activity
+            android:name=".Ty_register"
+            android:label="注册新用户"
+            android:parentActivityName=".Ty_loginActivity">          
+        </activity>
+        <activity
+            android:name=".Ty_register4"
+            android:label="注册新用户"
+            android:parentActivityName=".Ty_loginActivity">          
+        </activity>        
+        <activity
+            android:name=".Ty_mainActivity"
+            android:label="托运用户主界面">            
+        </activity>
+        <activity
+            android:name=".Ty_txtyd1"
+            android:label="填写托运单"
+            android:parentActivityName=".Ty_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Ty_txtyd2"
+            android:label="填写托运单"
+            android:parentActivityName=".Ty_mainActivity">            
+        </activity>
+        <activity
+            android:name=".Ty_txtyd3"
+            android:label="填写托运单"
+            android:parentActivityName=".Ty_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Ty_txtydYl3"
+            android:label="托运单信息预览"
+            android:parentActivityName=".Ty_txtyd3">          
+        </activity>
+        <activity
+            android:name=".Ty_infoManagement_ago"
+            android:label="发布信息管理"
+            android:parentActivityName=".Ty_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Ty_carInfo"
+            android:label="查看车源信息"
+            android:parentActivityName=".Ty_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Ty_carInfo_detail"
+            android:label="查看车源信息"
+            android:parentActivityName=".Ty_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Ty_infoManagement2"
+            android:label="发布信息管理"
+            android:parentActivityName=".Ty_infoManagement">           
+        </activity>
+        <activity
+            android:name=".Ty_infoManagement_note"
+            android:label="发布信息管理"
+            android:parentActivityName=".Ty_infoManagement2">           
+        </activity>
+        <activity
+            android:name=".Ty_tydinfo_wjd"
+            android:label="托运单信息（未接单）"
+            android:parentActivityName=".Ty_infoManagement_ago">           
+        </activity>
+        <activity
+            android:name=".Ty_txbxd_cash"
+            android:label="填写保险单"
+            android:parentActivityName=".Ty_infoManagement">           
+        </activity>
+        <activity
+            android:name=".Ty_pay_offline"
+            android:label="联系方式">           
+        </activity>
+        <activity
+            android:name=".Ty_set"
+            android:label="设置"
+            android:parentActivityName=".Ty_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Ty_set_myInfo"
+            android:label="设置"
+            android:parentActivityName=".Ty_set">           
+        </activity>
+        <activity
+            android:name=".Ty_identify"
+            android:label="实名认证"
+            android:parentActivityName=".Ty_set">           
+        </activity>
+                
+        <activity
+            android:name=".Ty_myInsurance"
+            android:label="我的保险单"
+            android:parentActivityName=".Ty_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Ty_myInsurance_detail"
+            android:label="我的保险单"
+            android:parentActivityName=".Ty_myInsurance">           
+        </activity>
+         <activity
+            android:name=".Ty_myInsurance_preview"
+            android:label="我的保险单"
+            android:parentActivityName=".Ty_myInsurance">           
+        </activity>       
+        
+        
+        <activity
+            android:name=".Cy_driver_admin_notice"
+            android:label="控险网公告"
+            android:parentActivityName=".First_Activity">          
+        </activity>        
+        <activity
+            android:name=".Cy_driver_login"
+            android:label="用户登录"
+            android:parentActivityName=".Cy_firstActivity">            
+        </activity>
+        <activity
+            android:name=".Cy_driver_clause"
+            android:label="投保协议"
+            android:parentActivityName=".Cy_driver_myNote">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_register1"
+            android:label="注册新用户"
+            android:parentActivityName=".Cy_driver_login">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_register2"
+            android:label="注册新用户"
+            android:parentActivityName=".Cy_driver_login">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_register3"
+            android:label="注册新用户"
+            android:parentActivityName=".Cy_driver_login">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_mainActivity"
+            android:label="承运用户主界面">            
+        </activity>
+        <activity
+            android:name=".Cy_driver_registerYl"
+            android:label="注册信息预览"
+            android:parentActivityName=".Cy_driver_register2">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_carinfo"
+            android:label="发布车源信息"
+            android:parentActivityName=".Cy_driver_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_publish"
+            android:label="发布车源信息"
+            android:parentActivityName=".Cy_driver_carinfo">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_manage"
+            android:label="车源信息管理"
+            android:parentActivityName=".Cy_driver_carinfo">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_manage_detail"
+            android:label="车源信息管理"
+            android:parentActivityName=".Cy_driver_manage">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_manage_change"
+            android:label="车源信息管理"
+            android:parentActivityName=".Cy_driver_manage">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_set"
+            android:label="设置"
+            android:parentActivityName=".Cy_driver_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_set_myInfo"
+            android:label="设置"
+            android:parentActivityName=".Cy_driver_set">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_set_mod"
+            android:label="设置"
+            android:parentActivityName=".Cy_driver_set">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_identify1"
+            android:label="实名认证"
+            android:parentActivityName=".Cy_driver_set">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_identify2"
+            android:label="实名认证"
+            android:parentActivityName=".Cy_driver_set">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_identify3"
+            android:label="实名认证"
+            android:parentActivityName=".Cy_driver_set">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_tyInfo_detail"
+            android:label="托运单详情"
+            android:parentActivityName=".Cy_driver_tyInfo">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_tyInfo"
+            android:label="查看托运信息"
+            android:parentActivityName=".Cy_driver_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_myNote"
+            android:label="我的托运单"
+            android:parentActivityName=".Cy_driver_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_myNote2"
+            android:label="我的托运单"
+            android:parentActivityName=".Cy_driver_myNote">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_myNote_note"
+            android:label="我的托运单"
+            android:parentActivityName=".Cy_driver_myNote">           
+        </activity>
+
+        <activity
+            android:name=".Cy_driver_txbxd_cash"
+            android:label="填写保险单"
+            android:parentActivityName=".Cy_driver_myNote">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_myNote_note_fresh"
+            android:label="托运单详情"
+            android:parentActivityName=".Cy_driver_myNote2">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_myInsurance"
+            android:label="我的保险单"
+            android:parentActivityName=".Cy_driver_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_myInsurance_detail"
+            android:label="我的保险单"
+            android:parentActivityName=".Cy_driver_myInsurance">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_myInsurance_preview"
+            android:label="我的保险单"
+            android:parentActivityName=".Cy_driver_myInsurance">           
+        </activity>
+                
+
+        
+        <activity
+            android:name=".Cy_company_admin_notice"
+            android:label="控险网公告"
+            android:parentActivityName=".First_Activity">          
+        </activity>  
+        <activity
+            android:name=".Cy_company_mainActivity"
+            android:label="用户登录">            
+        </activity>
+        <activity
+            android:name=".Cy_company_login"
+            android:label="用户登录"
+            android:parentActivityName=".Cy_firstActivity">            
+        </activity>
+        <activity
+            android:name=".Cy_firstActivity"
+            android:label="我要拉货"
+            android:parentActivityName=".First_Activity">            
+        </activity>
+        <activity
+            android:name=".Cy_company_clause"
+            android:label="投保协议"
+            android:parentActivityName=".Cy_company_myNote">            
+        </activity>
+        <activity
+            android:name=".Cy_company_tyInfo"
+            android:label="查看托运信息"
+            android:parentActivityName=".Cy_company_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Cy_company_tyInfo_detail"
+            android:label="查看托运信息"
+            android:parentActivityName=".Cy_company_tyInfo">           
+        </activity>
+        <activity
+            android:name=".Cy_company_map"
+            android:label="查看距离">           
+        </activity>
+        <activity
+            android:name=".Cy_company_myNote"
+            android:label="我的托运单"
+            android:parentActivityName=".Cy_company_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Cy_company_myNote2"
+            android:label="我的托运单"
+            android:parentActivityName=".Cy_company_myNote">           
+        </activity>
+        <activity
+            android:name=".Cy_company_myNote_note"
+            android:label="我的托运单"
+            android:parentActivityName=".Cy_company_myNote2">           
+        </activity>
+        
+        <activity
+            android:name=".Cy_company_register3"
+            android:label="注册新用户"
+            android:parentActivityName=".Cy_company_login">           
+        </activity>
+       
+        <activity
+            android:name=".Cy_company_wybx"
+            android:label="我要保险"
+            android:parentActivityName=".Cy_company_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Cy_uploadNote"
+            android:label="回单上传">           
+        </activity>        
+        <activity
+            android:name=".Cy_company_txbxd_cash"
+            android:label="填写保险单"
+            android:parentActivityName=".Cy_company_wybx">           
+        </activity>
+        
+        <activity
+            android:name=".Cy_company_txbxd_time"
+            android:label="填写保险单"
+            android:parentActivityName=".Cy_company_wybx">           
+        </activity>
+        <activity
+            android:name=".Cy_company_myInsurance"
+            android:label="我的保险单"
+            android:parentActivityName=".Cy_company_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Cy_company_myInsurance_detail"
+            android:label="我的保险单"
+            android:parentActivityName=".Cy_company_myInsurance">           
+        </activity>
+        <activity
+            android:name=".Cy_company_myInsurance_preview"
+            android:label="我的保险单"
+            android:parentActivityName=".Cy_company_myInsurance">           
+        </activity>
+        <activity
+            android:name=".Cy_company_set"
+            android:label="设置"
+            android:parentActivityName=".Cy_company_mainActivity">           
+        </activity>
+        <activity
+            android:name=".Cy_company_set_myInfo"
+            android:label="设置"
+            android:parentActivityName=".Cy_company_set">           
+        </activity>
+        <activity
+            android:name=".Cy_company_set_mod"
+            android:label="设置"
+            android:parentActivityName=".Cy_company_set">           
+        </activity>
+        <activity
+            android:name=".Cy_company_identify"
+            android:label="实名认证"
+            android:parentActivityName=".Cy_company_set">           
+        </activity>
+        
+        <activity
+            android:name=".Cy_fk_cc"
+            android:label="填写保险单"
+            android:parentActivityName=".Cy_txbxd_cc4">           
+        </activity>      
+        
+        <activity
+            android:name=".Cy_tyInfo2"
+            android:label="查看托运信息"
+            android:parentActivityName=".Cy_driver_mainActivity">           
+        </activity>
+        
+        
+        
+        
+        <activity
+            android:name=".Ty_forgetPwd"
+            android:label="忘记密码"
+            android:parentActivityName=".Ty_loginActivity">           
+        </activity>
+        <activity
+            android:name=".Ty_changePwd"
+            android:label="新密码"
+            android:parentActivityName=".Ty_forgetPwd">           
+        </activity>
+
+        <activity
+            android:name=".Cy_driver_forgetPwd"
+            android:label="忘记密码"
+            android:parentActivityName=".Cy_driver_login">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_changePwd"
+            android:label="新密码"
+            android:parentActivityName=".Cy_driver_forgetPwd">           
+        </activity>
+        <activity
+            android:name=".Cy_company_forgetPwd"
+            android:label="忘记密码"
+            android:parentActivityName=".Cy_company_login">           
+        </activity>
+        <activity
+            android:name=".Cy_company_changePwd"
+            android:label="新密码"
+            android:parentActivityName=".Cy_company_forgetPwd">           
+        </activity>
+        <activity
+            android:name=".Third_forgetPwd"
+            android:label="忘记密码"
+            android:parentActivityName=".Third_login">           
+        </activity>
+        <activity
+            android:name=".Third_changePwd"
+            android:label="新密码"
+            android:parentActivityName=".Third_forgetPwd">           
+        </activity>
+
+        <activity
+            android:name=".Ty_pay_online"
+            android:label="付款"
+            android:parentActivityName=".Ty_infoManagement_ago">           
+        </activity>
+        <activity
+            android:name=".Cy_driver_pay_online"
+            android:label="付款"
+            android:parentActivityName=".Cy_driver_myNote">           
+        </activity>
+        <activity
+            android:name=".Cy_company_pay_online"
+            android:label="付款"
+            android:parentActivityName=".Cy_company_myNote">           
+        </activity>
+
+    </application>
+</manifest>

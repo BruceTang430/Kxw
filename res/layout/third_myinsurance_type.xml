@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <LinearLayout 
+     android:id="@+id/linearLayout1"
+     android:orientation="vertical"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:gravity="center"
+     android:background="#ffffff">
+     <TextView android:text="保单类型"
+            android:id="@+id/txt_wybx"
+            android:layout_width="wrap_content"
+            android:textSize="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dip"
+            android:textColor="#636363"/>
+     
+     <Button android:id="@+id/btn_goods"
+            android:text="货运险"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"/> 
+     <Button android:id="@+id/btn_car"
+            android:text="车辆险"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dip"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"/>  
+ </LinearLayout>        

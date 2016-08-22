@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout android:id="@+id/relativelayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFFFF" >
+    <TableLayout android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:stretchColumns="0,3"
+        android:layout_marginTop="30dip" >
+       
+        <!-- 第一行 -->
+        <TableRow android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView1"
+                android:text="品名:"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_hwname"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <!-- 第2行 -->
+        <TableRow android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView2"
+                android:text="发货地:"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_fhaddress"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <!-- 第3行 -->
+        <TableRow android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView3"
+                android:text="到达地:"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_ddaddress"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <!-- 第4行 -->
+        <TableRow android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView4"
+                android:text="托运用户id:"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_ty_userid"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+<!--         导航和视图的分割线 -->
+<!--         <View  -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="1dp" -->
+<!--         android:background="#CCCCCC" -->
+<!--         android:layout_above="@+id/tableRow6" -->
+<!--         android:layout_marginTop="5dp" -->
+<!--         android:layout_marginBottom="5dp"/> -->
+        <!-- 第5行 -->
+        <TableRow android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView5"
+                android:text="运费:"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_carriage"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+        <!-- 第6行 -->
+        <TableRow android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView6"
+                android:text="托运人支付:"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_ty_ispay"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+<!--         导航和视图的分割线 -->
+<!--         <View  -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="1dp" -->
+<!--         android:background="#CCCCCC" -->
+<!--         android:layout_above="@+id/tableRow6" -->
+<!--         android:layout_marginTop="5dp" -->
+<!--         android:layout_marginBottom="5dp"/> -->
+        <!-- 第7行 -->
+        <TableRow android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView />
+            <TextView 
+                android:id="@+id/textView7"
+                android:text="是否保险:"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <TextView 
+                android:id="@+id/txt_cy_isinsure"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+            />
+            <TextView />
+        </TableRow>
+
+        
+        
+
+        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/tableRow6"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+        
+             
+    </TableLayout>
+    
+    <Button android:id="@+id/btn_wdtyd"
+                android:text="托运单详情"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/tableLayout1"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"/>
+    <Button android:id="@+id/btn_delete"
+                android:text="取消此单"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn_wdtyd"
+                android:layout_marginTop="20dp"/>
+    <Button android:id="@+id/btn_insure"
+                android:text="买保险"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/btn_delete"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
+    <Button android:id="@+id/btn_upload"
+                android:text="上传回单"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/btn_insure"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
+</RelativeLayout>
+</ScrollView>

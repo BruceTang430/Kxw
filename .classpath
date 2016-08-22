@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES">
+		<accessrules>
+			<accessrule kind="accessible" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="libs/GetuiExt-2.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/GetuiSDK2.8.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/json_simple-1.1.jar"/>
+	<classpathentry kind="lib" path="libs/commons-codec-1.2.jar"/>
+	<classpathentry kind="lib" path="libs/commons-configuration-1.6.jar"/>
+	<classpathentry kind="lib" path="libs/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="libs/commons-logging-1.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/gexin-rp-sdk-base-4.0.0.7.jar"/>
+	<classpathentry kind="lib" path="libs/gexin-rp-sdk-http-4.0.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/gexin-rp-sdk-template-4.0.0.4.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-all-1.8.5.jar"/>
+	<classpathentry kind="lib" path="libs/protobuf-java-2.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/sun.misc.BASE64Decoder.jar"/>
+	<classpathentry kind="lib" path="libs/baidumapapi_base_v3_7_3.jar"/>
+	<classpathentry kind="lib" path="libs/baidumapapi_cloud_v3_7_3.jar"/>
+	<classpathentry kind="lib" path="libs/baidumapapi_map_v3_7_3.jar"/>
+	<classpathentry kind="lib" path="libs/baidumapapi_radar_v3_7_3.jar"/>
+	<classpathentry kind="lib" path="libs/baidumapapi_search_v3_7_3.jar"/>
+	<classpathentry kind="lib" path="libs/baidumapapi_util_v3_7_3.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse/workplace/Kxw/libs/httpclient-4.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse/workplace/Kxw/libs/httpcore-4.3.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse/workplace/Kxw/libs/httpmime-4.3.1.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:background="#FFFFFFFF">
+    <TableLayout android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:stretchColumns="0,3"
+        android:layout_marginTop="30dp">
+         <!-- 第1行 --> 
+        <TableRow android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <TextView android:text="   数量(件):"
+                android:id="@+id/txt_hwnum"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_hwnum"
+                android:textSize="15dp"
+                android:layout_width="180dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第2行 --> 
+        <TableRow android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="   重量(吨):"
+                android:id="@+id/txt_hwweight"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_hwweight"
+                android:textSize="15dp"
+                android:layout_width="180dip"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第3行 --> 
+        <TableRow android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="   体积(m³):"
+                android:id="@+id/txt_hwvol"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_hwvol"
+                android:textSize="15dp"
+                android:layout_width="180dip"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第4行 -->
+        <TableRow android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="     包装:"
+                android:id="@+id/txt_hwbz"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_hwbz"
+                android:textSize="15dp"
+                android:layout_width="180dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第5行 --> 
+        <TableRow android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView />
+            <TextView android:text="     备注:"
+                android:id="@+id/txt_remark"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />          
+        </TableRow>           
+        </TableLayout>    
+        <EditText android:id="@+id/edit_remark"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tableLayout1"
+                android:minWidth="300dp"
+                android:hint="可不填"
+                android:maxLines="2"/>
+        
+            <RadioGroup android:id="@+id/radgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_remark"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+<!--         <LinearLayout android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:id="@+id/lin1" -->
+<!--             android:orientation="horizontal" -->
+<!--             > -->
+            <RadioButton android:id="@+id/radbtn_df"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="货到付款"
+                android:textSize="15dp"/>
+            <RadioButton android:id="@+id/radbtn_hd"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="回单付款"
+                android:textSize="15dp"/>
+<!--         </LinearLayout> -->
+<!--         <LinearLayout android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:id="@+id/lin2" -->
+<!--             android:orientation="horizontal" -->
+<!--             > -->
+            <RadioButton android:id="@+id/radbtn_pay2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="月结或协议"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"/>  
+             
+            <RadioButton android:id="@+id/radbtn_pay3"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="现金现付"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"/>             
+<!--            </LinearLayout> -->
+                     
+            </RadioGroup> 
+        <!-- 导航和视图的分割线 -->
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:textColor="#4f94cd"
+        android:layout_below="@+id/edit_remark"
+        android:layout_marginTop="10dp"
+        />
+         <Button
+            android:id="@+id/btn_yltyd"
+            android:text="预览托运单 "
+            android:textColor="#ffffff"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radgroup"
+            android:layout_marginTop="30dp"           
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttonshape">"
+        </Button>
+      
+</RelativeLayout>
+</ScrollView>

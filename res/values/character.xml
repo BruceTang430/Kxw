@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="character">
+        <item>自用</item>
+        <item>营运</item>
+    </string-array>        
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <LinearLayout 
+     android:id="@+id/linearLayout1"
+     android:orientation="vertical"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:gravity="center"
+     android:background="@drawable/v">
+     <!--      android:background="#ffefdb" -->
+     <TextView android:text="控险网"
+            android:id="@+id/kxw"
+            android:layout_width="wrap_content"
+            android:textSize="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dip"
+            android:textColor="#ffffff"/>
+     
+     <Button android:id="@+id/btn_sjrk"
+            android:text="货车司机入口"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"/> 
+     <Button android:id="@+id/btn_gsrk"
+            android:text="物流公司入口"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dip"
+            android:background="@drawable/buttonshape"
+            android:textColor="#636363"/>  
+ </LinearLayout>        

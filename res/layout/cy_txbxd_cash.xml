@@ -1,0 +1,254 @@
+ <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+ <RelativeLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:background="#FFFFFFFF">
+    <TableLayout android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,3"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/txt_preview"
+        android:layout_marginTop="10dip"> 
+        <!-- 第一行 -->
+        <TableRow android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip">
+            <TextView />
+            <TextView android:text="投保人名称:"
+                android:id="@+id/txt_tbrname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_insure_name"
+                android:textSize="15dp"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"/> 
+            <TextView />
+        </TableRow> 
+        <!-- 第2行 -->
+        <TableRow android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip">
+            <TextView />               
+            <TextView android:text="被保险人名称:"
+                android:id="@+id/txt_bbxrname2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_insured_name"
+                android:layout_width="200dp"
+                android:textSize="15dp"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:hint="若与保险人相同可不填"/>
+            <TextView />
+        </TableRow>
+        <!-- 第3行 -->
+        <TableRow android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip">
+            <TextView />          
+            <TextView android:text="被保险人电话:"
+                android:id="@+id/txt_insured_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+                
+            />
+            <EditText android:id="@+id/edit_insured_tel"
+                android:textSize="15dp"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="number"/>
+            <TextView />
+        </TableRow>
+        <!-- 第4行 -->
+        <TableRow android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip">
+            <TextView />         
+            <TextView android:text="被保险人人地址:"
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_insured_address"
+                android:textSize="15dp"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow> 
+        <!-- 第5行 -->
+        <TableRow android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip">
+            <TextView />                   
+            <TextView android:text="车牌号码:"
+                android:id="@+id/txt_carnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_carnum"
+                android:textSize="12dp"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第6行 -->
+        <TableRow android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip">
+            <TextView />  
+            <TextView android:text="司机姓名:"
+                android:id="@+id/txt_carnum22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_driver_name"
+                android:textSize="15dp"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        <!-- 第7行 -->
+        <TableRow android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip">
+            <TextView />                                
+             <TextView android:text="司机电话:"
+                android:id="@+id/txt_carnum222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_driver_tel"
+                android:textSize="15dp"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow> 
+        <!-- 第8行 -->
+        <TableRow android:id="@+id/tableRow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip">
+            <TextView />                               
+             <TextView android:text="驾驶证号:"
+                android:id="@+id/txt_carnum2222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+            />
+            <EditText android:id="@+id/edit_driver_license"
+                android:textSize="15dp"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"/>
+            <TextView />
+        </TableRow>
+        </TableLayout>
+                                   
+            <LinearLayout 
+                android:id="@+id/lin1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tableLayout1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="32dp">"
+
+            <TextView android:text="投保金额(元):"
+                android:id="@+id/txt_insuremoney"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+                android:layout_marginTop="2dp"
+                
+            /> 
+            <TextView android:text="应付保费(元):"
+                android:id="@+id/txt_insuremon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+                android:layout_marginTop="2dp"              
+            />
+            </LinearLayout> 
+            <LinearLayout 
+                android:id="@+id/lin2"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin1"
+                android:layout_marginTop="5dp" 
+                android:layout_marginLeft="20dp">        
+            <EditText android:id="@+id/edit_insuremoney"
+                android:textSize="15dp"
+                android:layout_width="110dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="number"/>
+              
+            <TextView android:id="@+id/txt_premium"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginLeft="50dp"/>
+            </LinearLayout>  
+            <RadioGroup android:id="@+id/radgroup"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin2"
+                android:layout_marginTop="5dp"  
+                android:layout_marginLeft="40dp" >
+            <RadioButton android:id="@+id/radbtn_offline"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="线下支付"
+                android:checked="true"/>
+            <RadioButton android:id="@+id/radbtn_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="余额抵扣"
+                android:layout_marginLeft="20dp"/>
+            </RadioGroup>     
+        
+        <Button
+            android:id="@+id/btn_submit"
+            android:text="确认提交"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_below="@+id/radgroup"
+            android:layout_marginTop="10dp" 
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"/>
+</RelativeLayout>
+</ScrollView>

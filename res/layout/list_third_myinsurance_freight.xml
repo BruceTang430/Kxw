@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center">
+
+        
+        <TextView android:id="@+id/txt_car_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"           
+            android:textColor="#4f94cd"
+            android:textSize="25dp"
+            android:layout_marginLeft="10dp"/>
+        
+        
+        <TextView android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保费: "
+        android:layout_below="@+id/txt_car_num"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"/>        
+        <TextView android:id="@+id/txt_premium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_car_num"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/txt_name"
+            android:textColor="#4f94cd"/>
+        
+        <TextView android:id="@+id/txt_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="支付状态: "
+        android:layout_below="@+id/txt_car_num"
+        android:layout_toRightOf="@+id/txt_premium"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"/>        
+        <TextView android:id="@+id/txt_ispay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_car_num"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/txt_name2"
+            android:textColor="#4f94cd"/>
+
+        
+        <TextView android:id="@+id/txt_time11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="投保时间: "
+        android:layout_below="@+id/txt_name2"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"/>
+        
+        <TextView android:id="@+id/txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txt_time11"
+        android:layout_below="@+id/txt_name2"
+        android:layout_marginTop="5dp"
+        android:textColor="#4f94cd"/>
+
+    <TextView android:id="@+id/txt_serial_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_insurance_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_driver_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_engine_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_car_numtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_carframe_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_car_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_firstdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_business_insure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView android:id="@+id/txt_jq_insure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView android:id="@+id/txt_car_typename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_jq_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_damage_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView android:id="@+id/txt_steal_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_three_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_driverseat_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_pasgerseat_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_idcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/txt_transfer_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    
+
+</RelativeLayout>

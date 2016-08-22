@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+            <TextView android:text="控险网联系方式"
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+                android:textSize="30dp"
+            />
+
+            <TextView android:text="电 话"
+                android:id="@+id/textView2"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+                android:textSize="20dp"
+                android:layout_marginTop="45dp"
+            />
+<!--             <TextView android:id="@+id/txt_tel" -->
+<!--                 android:layout_width="280dp" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:layout_marginTop="15dp" -->
+<!--                 android:text="18981992918" -->
+<!--             /> -->
+            <Button android:id="@+id/btn_tel"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:textSize="20dp"/>"
+
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="2dp"/>
+
+            <TextView android:text="银行卡号 （农行）"
+                android:id="@+id/textView3"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+                android:textSize="20dp"
+                android:layout_marginTop="25dp"
+            />
+            <TextView android:id="@+id/txt_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:text="6228480461340760317"
+                android:textIsSelectable="true"
+            />
+        <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="2dp"/>
+
+            <TextView android:text="支付宝账号"
+                android:id="@+id/txt_zf"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+                android:textSize="20dp"
+                android:layout_marginTop="25dp"
+            />
+            <TextView android:id="@+id/txt_paynum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:text="13981832067"
+                android:textIsSelectable="true"
+            />
+            
+         <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_marginTop="22dp"/>    
+        
+            <TextView android:text="QQ/微信号"
+                android:id="@+id/txt_qq"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+                android:textSize="20dp"
+                android:layout_marginTop="25dp"
+            />
+            <TextView android:id="@+id/txt_qqq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:text="1351462061"
+                android:textIsSelectable="true"
+            />
+            
+         <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_marginTop="22dp"/>          
+   
+        
+            <TextView android:text="扫一扫下载APP"
+                android:id="@+id/txt_w"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:textColor="#4f94cd"
+                android:textSize="20dp"
+                android:layout_marginTop="25dp"
+            />
+        <ImageView android:layout_width="150dp"
+         android:layout_height="150dp"
+         android:scaleType="fitXY"
+         android:background="@drawable/downloadd"
+            />
+            
+         <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_marginTop="22dp"/>  
+
+        </LinearLayout>
+        </ScrollView>

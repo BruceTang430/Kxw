@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:background="@drawable/v">
+    
+    <TableLayout android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="0,3"
+        android:gravity="center_vertical">
+        <!-- 第一行 -->
+        <TableRow android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView />
+            <Button android:id="@+id/btn_buy"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/buy"
+            />
+            <Button android:id="@+id/btn_note"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/document966"
+                android:layout_marginLeft="10dp"
+            />
+            <TextView />
+        </TableRow>
+       
+        <!-- 第3行 -->
+        <TableRow android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView />
+            <Button android:id="@+id/btn_set"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/set966"
+            />
+            <Button android:id="@+id/btn_insurance"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/insurance"
+                android:layout_marginLeft="10dp"
+            />
+            <TextView />
+        </TableRow>
+
+       
+    </TableLayout>
+</RelativeLayout>
